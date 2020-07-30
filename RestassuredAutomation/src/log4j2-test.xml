@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- can change status to “trace”, “debug”, “info”, “warn”, “error” or “fatal” to enable level at which internal log4j events will be logged -->
+<Configuration status="INFO">
+    <Appenders>
+    	<!-- log messages to System console -->
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] 
+            %highlight{%level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green, DEBUG=blue} %-5level %logger{36} - %msg%n"/>
+        </Console>
+        
+		<!-- write messages to rolling log file -->
+        <RollingRandomAccessFile name="LogToRollingRandomAccessFile" fileName="logs/app.log"
+                                 filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="2 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingRandomAccessFile>
+        
+    </Appenders>
+    
+    <Loggers>
+    
+        <!-- Define async logger -->
+        <AsyncLogger name="async_logger" level="INFO" additivity="false">
+            <AppenderRef ref="LogToRollingRandomAccessFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </AsyncLogger>
+
+        <!-- sync logger -->
+        <Root level="ERROR">
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+        
+    </Loggers>
+</Configuration>

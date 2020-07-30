@@ -1,0 +1,15 @@
+2020-07-30 13:23:30,149 INFO async_logger [main] Logger name => async_logger and level set at => INFO
+2020-07-30 13:23:30,163 INFO async_logger [main] ***********Started TC001_Get_All_Users***************
+2020-07-30 13:23:32,661 INFO async_logger [main] ***********Checking response body***************
+2020-07-30 13:23:32,697 INFO async_logger [main] Retrieved response body!
+2020-07-30 13:23:32,712 INFO async_logger [main] ***********Checking response time***************
+2020-07-30 13:23:32,712 INFO async_logger [main] Response time => 1390
+2020-07-30 13:23:32,718 INFO async_logger [main] Asserted response time is less than 3 seconds
+2020-07-30 13:23:32,728 INFO async_logger [main] ***********Checking session id***************
+2020-07-30 13:23:32,730 INFO async_logger [main] Session id => null
+2020-07-30 13:23:32,730 INFO async_logger [main] Asserted session id is null
+2020-07-30 13:23:32,740 INFO async_logger [main] ***********Checking response status code***************
+2020-07-30 13:23:32,740 INFO async_logger [main] Status code => 200
+2020-07-30 13:23:32,741 INFO async_logger [main] Asserted response status code
+2020-07-30 13:23:32,747 INFO async_logger [main] Got all header key-value pairs
+2020-07-30 13:23:32,774 INFO async_logger [main] ***********Finished TC001_Get_All_Users***************

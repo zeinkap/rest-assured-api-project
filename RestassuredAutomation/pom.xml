@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>RestassuredAutomation</groupId>
+  <artifactId>RestassuredAutomation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    
+    <plugins>
+    
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+    	<groupId>org.apache.maven.plugins</groupId>
+    	<artifactId>maven-surefire-plugin</artifactId>
+    	<version>3.0.0-M5</version>
+    	<configuration>
+    	  <suiteXmlFiles>
+    	    <suiteXmlFile>testng.xml</suiteXmlFile>
+    	  </suiteXmlFiles>
+    	</configuration>
+	  </plugin>
+      
+    </plugins>
+  </build>
+  
+  <dependencies>
+  
+  	<dependency>
+	    <groupId>io.rest-assured</groupId>
+	    <artifactId>rest-assured</artifactId>
+	    <version>4.3.0</version>	<!-- after removing scope "test" this jar works -->
+	</dependency>
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>7.1.0</version>
+	</dependency>
+	<dependency>
+    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.13</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.googlecode.json-simple</groupId>
+	    <artifactId>json-simple</artifactId>
+	    <version>1.1.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>4.1.2</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-ooxml</artifactId>
+	    <version>4.1.2</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.hamcrest</groupId>
+	    <artifactId>hamcrest</artifactId>
+	    <version>2.1</version>
+	</dependency>
+	
+	<!-- to use log4j -->
+	<dependency>
+      	<groupId>org.apache.logging.log4j</groupId>
+      	<artifactId>log4j-api</artifactId>
+      	<version>2.13.3</version>
+    </dependency>
+    <dependency>
+      	<groupId>org.apache.logging.log4j</groupId>
+      	<artifactId>log4j-core</artifactId>
+      	<version>2.13.3</version>
+    </dependency>
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-simple</artifactId>
+	    <version>1.7.30</version>	<!-- Use this 1.7.x version as it prevents error -->
+	</dependency>
+	<dependency>
+    	<groupId>com.lmax</groupId>
+    	<artifactId>disruptor</artifactId>
+    	<version>3.4.2</version>
+	</dependency>
+	
+	
+	<!-- to add extent report -->
+	<dependency>
+	  	<groupId>com.aventstack</groupId>
+	  	<artifactId>extentreports</artifactId>
+	  	<version>4.1.6</version>
+	</dependency>
+	
+  </dependencies>
+</project>

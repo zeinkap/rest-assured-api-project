@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2660" started-at="2020-07-30T13:23:30 EDT" finished-at="2020-07-30T13:23:32 EDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2660" started-at="2020-07-30T13:23:30 EDT" finished-at="2020-07-30T13:23:32 EDT">
+      <class name="api_tests.GET_Request">
+        <test-method status="PASS" signature="setup()[pri:0, instance:api_tests.GET_Request@4944252c]" name="setup" is-config="true" duration-ms="21" started-at="2020-07-30T13:23:30 EDT" finished-at="2020-07-30T13:23:30 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="getUsers()[pri:0, instance:api_tests.GET_Request@4944252c]" name="getUsers" is-config="true" duration-ms="2474" started-at="2020-07-30T13:23:30 EDT" finished-at="2020-07-30T13:23:32 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUsers -->
+        <test-method status="PASS" signature="checkResponseBody()[pri:0, instance:api_tests.GET_Request@4944252c]" name="checkResponseBody" duration-ms="45" started-at="2020-07-30T13:23:32 EDT" finished-at="2020-07-30T13:23:32 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkResponseBody -->
+        <test-method status="PASS" signature="checkResponseTime()[pri:0, instance:api_tests.GET_Request@4944252c]" name="checkResponseTime" duration-ms="11" started-at="2020-07-30T13:23:32 EDT" finished-at="2020-07-30T13:23:32 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkResponseTime -->
+        <test-method status="PASS" signature="checkSessionId()[pri:0, instance:api_tests.GET_Request@4944252c]" name="checkSessionId" duration-ms="6" started-at="2020-07-30T13:23:32 EDT" finished-at="2020-07-30T13:23:32 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSessionId -->
+        <test-method status="PASS" signature="checkStatusCode()[pri:0, instance:api_tests.GET_Request@4944252c]" name="checkStatusCode" duration-ms="2" started-at="2020-07-30T13:23:32 EDT" finished-at="2020-07-30T13:23:32 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatusCode -->
+        <test-method status="PASS" signature="getAllHeaders()[pri:0, instance:api_tests.GET_Request@4944252c]" name="getAllHeaders" duration-ms="4" started-at="2020-07-30T13:23:32 EDT" finished-at="2020-07-30T13:23:32 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllHeaders -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:api_tests.GET_Request@4944252c]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-07-30T13:23:32 EDT" finished-at="2020-07-30T13:23:32 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- api_tests.GET_Request -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
