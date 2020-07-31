@@ -3,6 +3,7 @@ package api_tests;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+import static io.restassured.RestAssured.*;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -55,7 +56,7 @@ public class GET_Request extends base.TestBase {
 		logger.info("Asserted response status code");
 	}
 	
-	@Test
+	//@Test
 	public void checkResponseTime() {
 		logger.info("***********Checking response time***************");
 		//Response time verification
@@ -75,7 +76,7 @@ public class GET_Request extends base.TestBase {
 		logger.info("Asserted session id is null");
 	}
 	
-	@Test
+	//@Test
 	public void getAllHeaders() {
 		//Get all headers (which are key-value pairs)
 		Headers allHeaders = response.getHeaders();
@@ -151,6 +152,21 @@ public class GET_Request extends base.TestBase {
 		logger.info("Status code => " + statusCode);
 		assertThat(statusCode, is(200));
 		
+	}
+	
+	@Test
+	public void testParamsUsingDifferentWay() {
+		logger.info("running api test using given, when, then");
+		
+		given()
+//			.param("user", "")
+//			.header("MyHeader", "some")
+			
+		.when()
+			.get("https://jsonplaceholder.typicode.com/users")
+		.then()
+			.statusCode(200)
+			.log().all();
 	}
 	
 	@AfterClass
